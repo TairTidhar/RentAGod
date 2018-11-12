@@ -1,0 +1,17 @@
+<!-- index.html.erb -->
+
+<!-- cocktail.html.erb -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>Here is the list of all the Gods</h1>
+      <ul class="list-group">
+        <% @gods.each do |god| %>
+          <li class="list-group-item">
+            <%= link_to god.name, god_path(god) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
