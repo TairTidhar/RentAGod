@@ -1,4 +1,8 @@
 class GodsController < ApplicationController
+	skip_before_action :authenticate_user!, only: :index
+	has_many :bookings
+	belongs_to :user
+	
   def index
     @gods = God.all
   end
@@ -10,4 +14,5 @@ class GodsController < ApplicationController
   def god_params
     params.require(:god).permit(:name, :location, :description)
   end
+
 end
