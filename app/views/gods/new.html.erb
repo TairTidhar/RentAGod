@@ -1,1 +1,14 @@
-<h2>You're here to add a God</h2>
+
+<div class="container">
+  <h1>RENT A GOD DOT COM</h1>
+  <h2>Add a new God</h2>
+
+  <%= simple_form_for(@god) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :location%>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+
+  <!-- <form action="plants/1/plant_tags" method="post"></form> -->
+</div>
