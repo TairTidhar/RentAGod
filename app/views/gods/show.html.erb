@@ -15,4 +15,14 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <h1>Book this God:</h1>
+  <%= simple_form_for([@god, @booking]) do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit%>
+    <p>Enter dates to see the total price, including additional fees and any taxes.</p>
+  <% end %>
+</div>
+
 

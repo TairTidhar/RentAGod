@@ -10,12 +10,12 @@ class GodsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @god = God.find(params[:id])
   end
 
   def new
     @god = God.new
-    @god.save
   end
 
   def create

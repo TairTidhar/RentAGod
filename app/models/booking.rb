@@ -1,3 +1,3 @@
 class Booking < ApplicationRecord
-  belongs_to :gods
+  belongs_to :god
 end
