@@ -7,6 +7,7 @@
       <p><h3>Rent me in:</h3> <%= @god.location %></p>
       <p><h3>About me: </h3><%= @god.description %></p>
       <p><h3>Price ($/hr):</h3><%= @god.price %></p>
+      <p><%= cl_image_tag @god.photo, height: 300, width: 400, crop: :fill %></p>
       <%= @god.user.name %>
      <p><%= link_to "Back to all Gods", gods_path %> </p>
      <p> <%= link_to "Destroy God", god_path(@god), method: :delete %></p>
@@ -14,3 +15,4 @@
     </div>
   </div>
 </div>
+

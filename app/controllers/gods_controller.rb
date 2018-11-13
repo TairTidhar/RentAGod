@@ -47,6 +47,6 @@ class GodsController < ApplicationController
   private
 
   def god_params
-    params.require(:god).permit(:name, :location, :description, :price)
+    params.require(:god).permit(:name, :location, :description, :price, :photo)
   end
 end
