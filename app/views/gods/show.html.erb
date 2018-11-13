@@ -4,14 +4,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <h1><%= @god.name %></h1>
-      <p><%= @god.location %></p>
-      <p><%= @god.description %></p>
-      <p><%= @god.user.name %></p>
+      <p><h3>Rent me in:</h3> <%= @god.location %></p>
+      <p><h3>About me: </h3><%= @god.description %></p>
+      <p><h3>Price ($/hr):</h3><%= @god.price %></p>
       <p><%= cl_image_tag @god.photo, height: 300, width: 400, crop: :fill %></p>
-      <%= link_to "See all gods", gods_path %>
+      <%= @god.user.name %>
+     <p><%= link_to "Back to all Gods", gods_path %> </p>
+     <p> <%= link_to "Destroy God", god_path(@god), method: :delete %></p>
+     <p> <%= link_to "Update God", edit_god_path(@god) %></p>
     </div>
   </div>
 </div>
-
-<!-- Linked the pages -->
 
