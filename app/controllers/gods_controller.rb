@@ -2,7 +2,11 @@ class GodsController < ApplicationController
 	skip_before_action :authenticate_user!, only: :index
 
   def index
-    @gods = God.all
+    if params[:search] != nil
+      @gods = God.where(name: params[:search])
+    else
+      @gods = God.all
+    end
   end
 
   def show
