@@ -15,7 +15,6 @@ class GodsController < ApplicationController
 
   def new
     @god = God.new
-    @god.save
   end
 
   def create
