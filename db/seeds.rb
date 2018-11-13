@@ -7,7 +7,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-  alex = User.create!(name: 'Alex', email: 'jean.luc@hotmail.fr', password: '*************')
+  alex = User.create!(name: 'Alex', email: 'jean.luc@hotmail.fr', password: 'password')
   buddha = God.new(name: 'Buddha', location: 'Lhassa', description: 'Big and fat')
   buddha.user = alex
   buddha.save
