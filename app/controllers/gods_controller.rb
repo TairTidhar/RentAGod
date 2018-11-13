@@ -10,6 +10,7 @@ class GodsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @god = God.find(params[:id])
   end
 
