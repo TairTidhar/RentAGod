@@ -6,9 +6,7 @@
       <h1><%= @god.name %></h1>
       <p><%= @god.location %></p>
       <p><%= @god.description %></p>
-      <p><% @god.user.each do |god| %></p>
-        <%= user.name %>
-      <% end %>
+      <p><% @god.user.name %></p>
     </div>
   </div>
 </div>

@@ -11,10 +11,12 @@ class GodsController < ApplicationController
 
   def new
     @god = God.new
+    @god.save
   end
 
   def create
     @god = God.new(god_params)
+    @god.user = current_user
     if @god.save
       redirect_to @god, notice: 'The God was successfully created! 🙏'
     else
@@ -27,5 +29,4 @@ class GodsController < ApplicationController
   def god_params
     params.require(:god).permit(:name, :location, :description)
   end
-
 end
