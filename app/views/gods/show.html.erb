@@ -7,9 +7,11 @@
       <p><%= @god.location %></p>
       <p><%= @god.description %></p>
       <p><%= @god.user.name %></p>
+      <p><%= cl_image_tag @god.photo, height: 300, width: 400, crop: :fill %></p>
       <%= link_to "See all gods", gods_path %>
     </div>
   </div>
 </div>
 
 <!-- Linked the pages -->
+
