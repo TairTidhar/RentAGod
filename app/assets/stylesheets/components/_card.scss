@@ -16,16 +16,15 @@
 
   position: relative;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 50px;
 
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
 
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 30px;
+    border-radius: 20px;
   }
 
   .godname {
@@ -48,3 +47,7 @@
   }
 }
 
+.rounded-image {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
