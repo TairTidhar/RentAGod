@@ -36,10 +36,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-h2 {
-  color: #292929;
-  font-weight: 600;
+h1 {
+  color: #000000;
+  margin: 25px;
+
 }
+
+h2 {
+  color: #000000;
+  font-weight: 600;
+  margin: 25px;
+}
+
+h3 {
+  color: #000000;
+  margin: 25px;
+}
+
 
 h4 {
   color: #292929;
@@ -88,6 +101,7 @@ p {
   line-height: 50px;
   padding: 0 30px;
   text-transform: uppercase;
+  border-radius: 15px;
 }
 
 .btn:hover, .btn:focus {
