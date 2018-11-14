@@ -1,15 +1,18 @@
 <!-- index.html.erb -->
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Here is the list of all the Gods</h1>
-      <ul class="list-group">
-        <% @gods.each do |god| %>
-          <li class="list-group-item">
+  <h1>Here is the list of all the Gods</h1>
+    <div class="row">
+      <% @gods.each do |god| %>
+        <div class="col-md-3">
+          <div class= "card">
+          <!-- <li class="card-item"> -->
             <%= link_to god.name, god_path(god) %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+            <div class= "img">
+            <%= cl_image_tag god.photo, height: 300, width: 400, crop: :fill %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <!-- </ul> -->
   </div>
 </div>
