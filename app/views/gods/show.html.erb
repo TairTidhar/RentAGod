@@ -4,15 +4,22 @@
   <div class="god">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1 class= "godname"><%= @god.name %></h1>
-      <p><h3>Rent me in:</h3> <%= @god.location %></p>
-      <p><h3>About me: </h3><%= @god.description %></p>
-      <p><h3>Price ($/hr):</h3><%= @god.price %></p>
-      <p><%= cl_image_tag @god.photo, height: 300, width: 400, crop: :fill %></p>
-      <%= @god.user.name %>
-     <p><%= link_to "Back to all Gods", gods_path %> </p>
-     <p> <%= link_to "Destroy God", god_path(@god), method: :delete %></p>
-     <p> <%= link_to "Update God", edit_god_path(@god) %></p>
+      <h1 class= "page-header"><%= @god.name %></h1>
+      <div>
+        <h3>Find me in:</h3>
+        <p><%= @god.location %></p>
+      </div>
+      <div>
+        <h3>About me: </h3>
+        <p><%= @god.description %></p>
+      </div>
+      <div>
+        <h3>Pricing:</h3>
+        <p>$<%= @god.price %> AUD per day</p>
+      </div>
+      <div><%= cl_image_tag @god.photo, height: 300, width: 400, crop: :fill %></div>
+     <p> <%= link_to "Remove God", god_path(@god), method: :delete, class: "btn" %>
+      <%= link_to "Update God", edit_god_path(@god), class: "btn" %></p>
     </div>
   </div>
 </div>
@@ -20,8 +27,8 @@
 <div class="booking_form">
   <h1>Book this God:</h1>
   <%= simple_form_for([@god, @booking]) do |f| %>
-    <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
     <%= f.button :submit, "Make a Booking", class: "btn btn-primary"%>
     <p>Enter dates to see the total price, including additional fees and any taxes.</p>
   <% end %>
