@@ -19,7 +19,7 @@ allah.user = jl
 allah.remote_photo_url = "https://images.unsplash.com/photo-1539077036699-681b21c54c31?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b71897a1c5f86890de32d8115e72a7d3&auto=format&fit=crop&w=1081&q=80"
 allah.save
 
-jesus = God.new(name: 'Jesus', location: 'Jerusalem', description: 'Screwed', price: 7)
+jesus = God.new(name: 'Jesus', location: 'Jerusalem', description: 'Nailed', price: 7)
 jesus.user = jl
 jesus.remote_photo_url = "https://images.unsplash.com/photo-1510333337682-fdd0eba357a4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ab63f2259433a9d6feb375594455ea4b&auto=format&fit=crop&w=675&q=80"
 jesus.save
