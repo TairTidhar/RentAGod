@@ -1,6 +1,7 @@
 <!-- show.html.erb -->
 
 <div class="container">
+  <div class="god">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <h1><%= @god.name %></h1>
@@ -15,7 +16,8 @@
     </div>
   </div>
 </div>
-<div class="container">
+
+<div class="booking_form">
   <h1>Book this God:</h1>
   <%= simple_form_for([@god, @booking]) do |f| %>
     <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
@@ -23,4 +25,5 @@
     <%= f.button :submit, "Make a Booking", class: "btn btn-primary"%>
     <p>Enter dates to see the total price, including additional fees and any taxes.</p>
   <% end %>
+  </div>
 </div>
