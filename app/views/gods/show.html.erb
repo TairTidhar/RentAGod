@@ -1,9 +1,10 @@
 <!-- show.html.erb -->
 
 <div class="container">
+  <div class="god">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1><%= @god.name %></h1>
+      <h1 class= "godname"><%= @god.name %></h1>
       <p><h3>Rent me in:</h3> <%= @god.location %></p>
       <p><h3>About me: </h3><%= @god.description %></p>
       <p><h3>Price ($/hr):</h3><%= @god.price %></p>
@@ -16,3 +17,13 @@
   </div>
 </div>
 
+<div class="booking_form">
+  <h1>Book this God:</h1>
+  <%= simple_form_for([@god, @booking]) do |f| %>
+    <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.button :submit, "Make a Booking", class: "btn btn-primary"%>
+    <p>Enter dates to see the total price, including additional fees and any taxes.</p>
+  <% end %>
+  </div>
+</div>

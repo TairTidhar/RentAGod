@@ -1,5 +1,5 @@
 class GodsController < ApplicationController
-	skip_before_action :authenticate_user!, only: :index
+	skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:search] != nil
@@ -10,6 +10,7 @@ class GodsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @god = God.find(params[:id])
   end
 
