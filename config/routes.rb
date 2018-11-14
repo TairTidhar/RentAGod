@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 	resources :gods do
 		resources :bookings, only: [ :new, :create]
   end
+
+  get '/dashboard', to: "pages#dashboard"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
