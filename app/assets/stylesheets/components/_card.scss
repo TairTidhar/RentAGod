@@ -1,21 +1,44 @@
 /*_card.scss*/
 .card {
-/*background-size: cover;
-background-position: center;
-height: 150px;
-border-radius: 1px;
+  /*background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
 
-box-shadow: 0 0 10px rgba(0,0,0,0.2);
-display: flex;
-align-items: center;
-justify-content: space-around;
-font-size: 25px;
-color: white;
-font-weight: bolder;
-text-shadow: 0 0 10px rgba(0,0,0,0.7);*/
-margin: 15px 10px;
-}
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
-.img {
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  overflow: hidden;
+
+  img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .godname{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+
+
+
+    a{
+      color: white;
+    }
+  }
 }
 

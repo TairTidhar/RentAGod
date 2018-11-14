@@ -6,8 +6,10 @@
         <div class="col-md-3">
           <div class= "card">
           <!-- <li class="card-item"> -->
+            <div class="godname">
             <%= link_to god.name, god_path(god) %>
-            <div class= "img">
+            </div>
+            <div>
             <%= cl_image_tag god.photo, height: 300, width: 400, crop: :fill %>
             </div>
           </div>
