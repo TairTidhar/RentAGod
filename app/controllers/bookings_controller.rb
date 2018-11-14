@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
     @god = God.find(params[:god_id])
     @booking = Booking.new(booking_params)
     @booking.god = @god
-
     if @booking.save
       redirect_to gods_path, notice: 'Your booking is confirmed. Check your inbox - you will recieve an email with the details'
     else
