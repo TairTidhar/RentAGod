@@ -70,90 +70,6 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-
-/*
-  Theme Name: Folio
-  Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-  Author: BootstrapMade.com
-  Author URL: https://bootstrapmade.com
-*/
-
-/*  General Styling
-/*-----------------------------------------------------------------------------------*/
-
-body {
-  background: #ffffff;
-  color: #898989;
-  font-family: 'Poppins', helvetica;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: 0.02em;
-  overflow-x: hidden;
-  margin: 0 auto;
-  padding: 0;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-h2 {
-  color: #292929;
-  font-weight: 600;
-}
-
-h4 {
-  color: #292929;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-a {
-  color: #292929;
-  text-decoration: none !important;
-  -moz-transition: all 0.5s ease-in-out 0s;
-  -ms-transition: all 0.5s ease-in-out 0s;
-  -o-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
-}
-
-a:hover {
-  -moz-transition: all 0.5s ease-in-out 0s;
-  -ms-transition: all 0.5s ease-in-out 0s;
-  -o-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
-}
-
-a:hover, a:focus {
-  color: #b8a07e;
-  text-decoration: underline;
-}
-
-nav ul li a {
-  padding: 2px 0 0 0;
-  position: relative;
-  display: block;
-  font-size: 12px;
-  color: #999999;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-  line-height: 14px;
-  text-transform: uppercase;
-  -moz-transition: all 0.5s ease-in-out 0s;
-  -ms-transition: all 0.5s ease-in-out 0s;
-  -o-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
-}
-
 p {
   margin: 25px 0;
   padding: 0;
@@ -243,10 +159,6 @@ p {
 .mb-30 {
   margin-bottom: 30px;
 }
-
-/*-----------------------------------------------------------------------------------*/
-/*  Navbar Top
-/*-----------------------------------------------------------------------------------*/
 
 nav {
   position: fixed;
@@ -701,4 +613,3 @@ nav ul li a {
 .credits {
   font-size: 13px;
 }
-
