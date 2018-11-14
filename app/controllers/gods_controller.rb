@@ -33,15 +33,15 @@ class GodsController < ApplicationController
   end
 
   def update
-    @god = God.find(params[:id])
-    @god.update(god_params)
-    redirect_to god_path(@god)
+      @god = God.find(params[:id])
+      @god.update(god_params)
+      redirect_to god_path(@god)
   end
 
   def destroy
-    @god = God.find(params[:id])
-    @god.destroy
-    redirect_to gods_path, notice: 'The God was successfully destroyed 🚮 '
+      @god = God.find(params[:id])
+      @god.destroy
+      redirect_to gods_path, notice: 'The God was successfully destroyed 🚮 '
   end
 
   private
