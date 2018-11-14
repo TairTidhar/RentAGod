@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.god = @god
 
     if @booking.save
-      redirect_to god_path(@god)
+      redirect_to gods_path, notice: 'Your booking is confirmed. Check your inbox - you will recieve an email with the details'
     else
       render :new
     end
