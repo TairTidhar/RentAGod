@@ -1,5 +1,5 @@
 class God < ApplicationRecord
-  has_many :bookings, dependent: :destroy, through: :bookings
+  has_many :bookings, dependent: :destroy
   belongs_to :user
 
   validates :name, presence: true, uniqueness: true
