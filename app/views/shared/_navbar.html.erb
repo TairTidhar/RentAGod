@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "", height: 50 %>
+    <%= image_tag "icon_image.jpg", height: 50 %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -10,13 +10,16 @@
     <% if user_signed_in? %>
           <%= form_tag gods_path, method: :get, class: "search-form-hello" do %>
             <%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Search by name' %>
-            <%= submit_tag "Search" %>
+            <%= submit_tag "Search", class: "search-form-hello" %>
           <% end %>
           <%= link_to "My booked Gods", "#", class: "navbar-wagon-item navbar-wagon-link" %>
           <%= link_to "Host my God", new_god_path, class: "navbar-wagon-item navbar-wagon-link" %>
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>       
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>  
       <% else %>
-          <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search by name' %>
+            <%= form_tag gods_path, method: :get, class: "search-form-hello" do %>
+            <%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Search by name' %>
+            <%= submit_tag "Search", class: "search-form-hello" %>
+          <% end %>
           <%= link_to 'Login', new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"%> 
       <% end %>
   </div>

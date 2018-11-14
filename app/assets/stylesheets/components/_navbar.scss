@@ -7,7 +7,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: auto;
 }
 
@@ -17,22 +17,26 @@
   width: auto;
 }
 
-// /* Logo */
-// .navbar-wagon-brand img {
-//   height: 50px;
-// }
+/* Logo */
+.navbar-wagon-brand img {
+  display: flex;
+  height: 50px;
+  align-content: start;
+}
 
 /* Right section */
 .navbar-wagon-right {
   display: flex;
   align-items: baseline;
   justify-content: center;
+  width: auto;
 }
 
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+  width: auto;
 }
 
 /* Navbar link */
