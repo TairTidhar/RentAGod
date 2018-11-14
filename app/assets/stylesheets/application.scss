@@ -38,30 +38,31 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: #898989;
-  margin: 25px;
-
+  margin-bottom: 25px;
+  margin-top: 25px;
+  padding: 0;
 }
 
 h2 {
-  color: #000000;
+  color: #898989;
   font-weight: 600;
   margin: 25px;
 }
 
 h3 {
-  color: #000000;
+  color: #898989;
   margin: 25px;
 }
 
 
 h4 {
-  color: #292929;
+  color: #898989;
   font-size: 14px;
   font-weight: 600;
 }
 
 a {
-  color: #292929;
+  color: #999999;
   text-decoration: none !important;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -116,4 +117,6 @@ p {
   margin: 0 auto;
 }
 
-
+.col-md-6 {
+  padding: 0;
+}
