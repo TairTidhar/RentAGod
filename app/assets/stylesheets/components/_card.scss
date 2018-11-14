@@ -12,20 +12,20 @@
   color: white;
   font-weight: bolder;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);*/
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
   position: relative;
   margin-bottom: 20px;
   border-radius: 30px;
   overflow: hidden;
 
-  img{
+  img {
     max-width: 100%;
     height: auto;
     border-radius: 30px;
   }
 
-  .godname{
+  .godname {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -34,10 +34,13 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
 
-
-
-    a{
+    a {
       color: white;
+    }
+
+    a:hover {
+      color: grey;
+
     }
   }
 }
