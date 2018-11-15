@@ -5,7 +5,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 
 gem 'carrierwave', '~> 1.2'
-
+gem 'pg_search'
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
