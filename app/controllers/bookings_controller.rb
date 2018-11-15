@@ -11,10 +11,15 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to dashboard_path, notice: 'Your booking is confirmed. Check your inbox - you will recieve an email with the details'
+      redirect_to booking_path(@booking), notice: 'Your booking is confirmed. Check your inbox - you will recieve an email with the details'
     else
       render "gods/show"
     end
+  end
+
+  def show
+   @booking = Booking.new
+     @booking = Booking.find(params[:id])
   end
 
   private
