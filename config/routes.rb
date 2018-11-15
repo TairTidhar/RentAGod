@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 	resources :gods do
 		resources :bookings, only: [ :new, :create]
+		resources :god_powers, only: [ :new, :create]
   end
+
 
   get '/dashboard', to: "pages#dashboard"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
