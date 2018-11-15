@@ -1,11 +1,17 @@
 <div class="container">
-<h1 class="page-header">Booking Confirmation</h1>
-<div>
-  <% current_user.bookings.each do |booking| %>
-  <h3>Booking Details:</h3>
-  <p> You have booked <%= booking.god.name %></p>
+  <h1 class="page-header">Bookings</h1>
+<div class="container">
+    <div>
+    <% current_user.bookings.each do |booking| %>
+  <div>
+  <p> 👉 Your booking of <%= booking.god.name %> starts on
+    <% start_date = booking.start_date %>
+    <% end_date = booking.end_date %> <%= start_date.strftime('%A, %d %b %y') %></p>
+  </div>
+  <div>
+    <%= link_to "View my booking", booking_path(booking), class: "btn" %>
+  </div>
+  <% end %>
 </div>
-<% end %>
 </div>
 </div>
-<div>

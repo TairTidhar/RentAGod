@@ -1,0 +1,16 @@
+<div class="container">
+<h1 class="page-header">My Gods</h1>
+<div>
+  <% @gods.each do |god| %>
+  <h3> Upcoming bookings for <%= god.name %></h3>
+  <p> <%= cl_image_tag god.photo, height: 200, width: 300, crop: :fill, class:"rounded-image" %> </p>
+   <p> <% god.bookings.each do |booking| %> </p>
+    <% start_date = booking.start_date %>
+    <% end_date = booking.end_date %>
+    <li> <%= start_date.strftime('%A, %d %b %y') %> - <%=end_date.strftime('%A, %d %b %y') %></li>
+    <% end %>
+  </p>
+  <% end %>
+</div>
+</div>
+</div>

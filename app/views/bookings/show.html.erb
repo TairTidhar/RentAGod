@@ -1,0 +1,29 @@
+<div class="container">
+  <h1 class="page-header">Booking Confirmation</h1>
+  <div class="god">
+
+    <div class="row">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-6">
+      <h1 class="text-left"><%= @booking.god.name %></h1>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-md-5">
+            <%= cl_image_tag @booking.god.photo, height: 300, width: 400, crop: :fill, class:"rounded-image" %>
+        </div>
+        <div class="col-md-6">
+          <h4 class="text-left">Find me in:</h4>
+          <p class="text-left"><%= @booking.god.location %></p>
+          <h4 class="text-left">About me: </h4>
+          <p class="text-left"><%= @booking.god.description %></p>
+          <h4 class="text-left">Pricing:</h4>
+          <p class="text-left">$<%= @booking.god.price %> AUD per day</p>
+          <%= link_to "Download your PDF", "#{booking_path(@booking)}.pdf"  %>
+        </div>
+      </div>
+  </div>
+</div>
+<div>

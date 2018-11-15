@@ -3,7 +3,7 @@ class GodsController < ApplicationController
 
   def index
     if params[:search] != nil
-      @gods = God.where(name: params[:search])
+      @gods = God.global_search(params[:search])
     else
       @gods = God.all
     end
@@ -23,7 +23,7 @@ class GodsController < ApplicationController
     @god.power << params[:god][:power]
     @god.user = current_user
     if @god.save
-      redirect_to @god, notice: 'The God was successfully created! 🙏'
+      redirect_to owner_dashboard_path, notice: 'The God was successfully created! 🙏'
     else
       render :new
     end

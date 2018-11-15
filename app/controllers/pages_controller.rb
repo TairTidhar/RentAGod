@@ -5,4 +5,8 @@ class PagesController < ApplicationController
 
   def dashboard
   end
+
+  def owner_dashboard
+    @gods = God.where(user_id: current_user.id)
+  end
 end
