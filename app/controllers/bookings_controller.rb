@@ -18,8 +18,14 @@ class BookingsController < ApplicationController
   end
 
   def show
-   @booking = Booking.new
-     @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
+
+    respond_to do |format|
+      format.html { render :show }
+      format.pdf {
+        render :pdf => "show", :layout => 'pdf.html'
+      }
+    end
   end
 
   private
