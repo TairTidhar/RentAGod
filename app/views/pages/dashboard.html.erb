@@ -2,6 +2,7 @@
 <h1 class="page-header">Booking Confirmation</h1>
 <div>
   <% current_user.bookings.each do |booking| %>
+    <%= link_to "View my booking", booking_path(booking), class: "btn" %>
   <h3>Booking Details test:</h3>
   <p> You have booked <%= booking.god.name %></p>
 </div>
@@ -9,3 +10,4 @@
 </div>
 </div>
 <div>
+
