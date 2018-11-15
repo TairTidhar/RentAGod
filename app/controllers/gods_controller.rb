@@ -3,7 +3,7 @@ class GodsController < ApplicationController
 
   def index
     if params[:search] != nil
-      @gods = God.where(name: params[:search])
+      @gods = God.global_search(params[:search])
     else
       @gods = God.all
     end

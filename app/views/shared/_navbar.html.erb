@@ -15,15 +15,13 @@
           <%= link_to "My Bookings", dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
           <%= link_to "Host my God", new_god_path, class: "navbar-wagon-item navbar-wagon-link" %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
-      <% else %>
+    <% else %>
             <%= form_tag gods_path, method: :get, class: "search-form-hello" do %>
-            <%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Search by name' %>
-          <% end %>
+              <%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Search by name' %>
+            <% end %>
           <%= link_to 'Login', new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"%>
-      <% end %>
+    <% end %>
   </div>
-
-
 
 
   <!-- Dropdown list appearing on mobile only -->
@@ -38,4 +36,8 @@
     </div>
   </div>
 </div>
+
+
+  <!-- Pg-search -->
+
 
