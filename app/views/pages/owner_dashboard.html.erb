@@ -4,7 +4,7 @@
   <% @gods.each do |god| %>
   <h3><%= god.name %></h3>
   <p> <%= cl_image_tag god.photo, height: 300, width: 400, crop: :fill %> </p>
-  <h3> Confirmed Bookings </h3>
+  <h3> Confirmed Bookings test</h3>
    <p> <% god.bookings.each do |booking| %> </p>
     <% start_date = booking.start_date %>
     <% end_date = booking.end_date %>
