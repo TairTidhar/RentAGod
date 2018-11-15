@@ -6,4 +6,3 @@ class God < ApplicationRecord
   validates :location, :photo, :price, presence: true
   mount_uploader :photo, PhotoUploader
 end
-
