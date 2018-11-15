@@ -22,7 +22,7 @@ class GodsController < ApplicationController
     @god = God.new(god_params)
     @god.user = current_user
     if @god.save
-      redirect_to @god, notice: 'The God was successfully created! 🙏'
+      redirect_to owner_dashboard_path, notice: 'The God was successfully created! 🙏'
     else
       render :new
     end
