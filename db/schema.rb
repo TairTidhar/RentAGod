@@ -10,6 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 2018_11_15_050959) do
+
 ActiveRecord::Schema.define(version: 2018_11_15_010613) do
 
   # These are extensions that must be enabled in order to support this database
@@ -26,6 +29,15 @@ ActiveRecord::Schema.define(version: 2018_11_15_010613) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "god_powers", force: :cascade do |t|
+    t.bigint "power_id"
+    t.bigint "god_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["god_id"], name: "index_god_powers_on_god_id"
+    t.index ["power_id"], name: "index_god_powers_on_power_id"
+  end
+
   create_table "gods", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -37,6 +49,12 @@ ActiveRecord::Schema.define(version: 2018_11_15_010613) do
     t.integer "price"
     t.index ["user_id"], name: "index_gods_on_user_id"
   end
+
+
+  create_table "powers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
@@ -62,5 +80,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_010613) do
 
   add_foreign_key "bookings", "gods"
   add_foreign_key "bookings", "users"
+  add_foreign_key "god_powers", "gods"
+  add_foreign_key "god_powers", "powers"
   add_foreign_key "gods", "users"
 end
