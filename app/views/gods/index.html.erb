@@ -4,17 +4,22 @@
     <div class="row">
       <% @gods.each do |god| %>
         <div class="col-md-3">
-          <div class= "card">
-          <!-- <li class="card-item"> -->
-            <div class="godname">
-            <%= link_to god.name, god_path(god) %>
+          <%= link_to god_path(god) do  %>
+            <div class= "card">
+            <!-- <li class="card-item"> -->
+              <div class="godname">
+              <%=  god.name %>
+              </div>
+              <div class="card-link">
+              </div>
+              <div>
+              <%= cl_image_tag god.photo, height: 300, width: 400, crop: :fill %>
+              </div>
             </div>
-            <div>
-            <%= cl_image_tag god.photo, height: 300, width: 400, crop: :fill %>
-            </div>
-          </div>
+          <% end %>
         </div>
       <% end %>
       <!-- </ul> -->
   </div>
 </div>
+
