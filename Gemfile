@@ -13,7 +13,6 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 
-gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
 
 gem 'autoprefixer-rails'
@@ -36,5 +35,12 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'wkhtmltopdf-binary'
+
   # gem 'dotenv-rails'
+end
+
+group :production do
+  gem 'wkhtmltopdf-heroku'
+
 end
