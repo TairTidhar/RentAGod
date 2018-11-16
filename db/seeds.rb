@@ -8,7 +8,7 @@ God.destroy_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-powers = ["ruby on rails", "css"]
+powers = ["granting pimple free days", "smiting thy enemies", "providing infinite well of chocolate"]
 powers.each do |name|
 	Power.create(name: name)
 end

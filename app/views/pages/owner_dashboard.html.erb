@@ -3,7 +3,9 @@
 <div>
   <% @gods.each do |god| %>
   <h3> Upcoming bookings for <%= god.name %></h3>
-  <p> <%= cl_image_tag god.photo, height: 200, width: 300, crop: :fill, class:"rounded-image" %> </p>
+  <%= link_to god_path(god) do  %>
+    <%= cl_image_tag god.photo, height: 200, width: 300, crop: :fill, class:"rounded-image" %> 
+  <% end %>
    <p> <% god.bookings.each do |booking| %> </p>
     <% start_date = booking.start_date %>
     <% end_date = booking.end_date %>
