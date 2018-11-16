@@ -22,7 +22,12 @@ class GodsController < ApplicationController
     @god = God.new(god_params)
     @god.user = current_user
     if @god.save
-      redirect_to gods_path, notice: 'The God was successfully created! 🙏'
+      params[:god][:power_ids].each do |id|
+        godpower = GodPower.new(power_id: id)
+        godpower.god = @god
+        godpower.save
+      end
+      redirect_to owner_dashboard_path, notice: 'The God was successfully created! 🙏'
     else
       render :new
     end

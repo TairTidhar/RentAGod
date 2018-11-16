@@ -26,7 +26,10 @@
           <h4 class="text-left">Pricing:</h4>
           <p class="text-left">$<%= @god.price %> AUD per day</p>
           <h4 class="text-left">Power:</h4>
-          <p class="text-left"><%=  %></p>
+          <% @god.powers.each do |power| %>
+            <%= power.name %>
+          <% end %>
+          <p class="text-left"></p>
         </div>
         </div>
 

@@ -1,3 +1,4 @@
 class Power < ApplicationRecord
-	# belongs_to :god
+	has_many :god_powers
+	has_many :gods, through: :god_powers
 end
