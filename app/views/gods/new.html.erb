@@ -22,7 +22,19 @@
           <%= f.input :photo_cache, as: :hidden %>
        </div>
        <div class= "col-xs-12">
-          
+          <div class="form-group">
+            <label class="control-label check_boxes optional">Power</label>
+            <input type="hidden" name="god[power_ids][]" value="">
+            <div class="power-choices">
+              <% Power.all.each do |power| %>
+                <input type="checkbox" class="hidden" value="<%= power.id %>" name="god[power_ids][]" id="god_power_ids_<%= power.id %>">
+                <label class="power-choice" for="god_power_ids_<%= power.id %>">
+                  <%= power.name %>
+                  <i class="fa fa-check"></i>
+                </label>
+              <% end %>
+             </div>
+          </div>
        </div>
        <div class= "col-xs-12">
           <%= f.input :description, placeholder: "Description" %>
