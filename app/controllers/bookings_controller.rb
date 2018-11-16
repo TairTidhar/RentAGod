@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
     respond_to do |format|
       format.html { render :show }
       format.pdf {
-        render :pdf => "show", :layout => 'pdf.html'
+        render :pdf => "show", :layout => 'pdf.html', show_as_html: true
       }
     end
   end
