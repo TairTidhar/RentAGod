@@ -6,7 +6,7 @@ class God < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-  has_many :god_powers
+  has_many :god_powers, dependent: :destroy
   has_many :powers, through: :god_powers
   
   has_many :bookings, dependent: :destroy
