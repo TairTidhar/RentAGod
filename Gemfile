@@ -41,6 +41,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'wkhtmltopdf-heroku'
+  gem 'wkhtmltopdf-binary-edge', '~> 0.12.2.1'
 
 end
