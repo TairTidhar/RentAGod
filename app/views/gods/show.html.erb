@@ -37,7 +37,7 @@
          <div class="text-center">
          <p> <%= link_to "Remove God", god_path(@god), method: :delete, class: "btn btn-primary"%>
          <%= link_to "Update God", edit_god_path(@god), class: "btn btn-primary" %>
-         <%= link_to "Add a power", new_god_god_power_path(@god), class: "btn btn-primary" %>
+      <!--   <%= link_to "Add a power", new_god_god_power_path(@god), class: "btn btn-primary" %> -->
          <% end %>
          </p>
          </div>
@@ -45,8 +45,9 @@
   </div>
 </div>
 
+<div class="container">
 <div class="booking_form">
-  <h1 class="text-center">Book this God:</h1>
+  <h1 class="text-center">Book <%= @god.name %></h1>
   <%= simple_form_for([@god, @booking]) do |f| %>
     <div class="col-md-6">
     <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
@@ -59,4 +60,5 @@
     </div>
   <% end %>
   </div>
+</div>
 </div>

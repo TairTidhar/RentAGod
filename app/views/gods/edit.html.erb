@@ -1,11 +1,12 @@
 <div class="container">
-  <h2>EDIT A GOD</h2>
+
+  <h2>Update <%= @god.name %></h2>
 
   <%= simple_form_for(@god) do |f| %>
     <%= f.input :name %>
     <%= f.input :location%>
     <%= f.input :description %>
     <%= f.input :price %>
-    <%= f.submit "Update your God" %>
+    <%= f.submit "Update your God", class: "btn btn-primary" %>
   <% end %>
 </div>
