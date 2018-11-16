@@ -20,7 +20,7 @@ class GodsController < ApplicationController
 
   def create
     @god = God.new(god_params)
-    @god.power << params[:god][:power]
+    # @god.power << params[:god][:power]
     @god.user = current_user
     if @god.save
       redirect_to owner_dashboard_path, notice: 'The God was successfully created! 🙏'
