@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2018_11_15_050959) do
-
-ActiveRecord::Schema.define(version: 2018_11_15_010613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,16 +42,10 @@ ActiveRecord::Schema.define(version: 2018_11_15_010613) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
     t.integer "price"
+    t.string "photo"
     t.index ["user_id"], name: "index_gods_on_user_id"
   end
-
-
-  create_table "powers", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
@@ -63,6 +54,12 @@ ActiveRecord::Schema.define(version: 2018_11_15_010613) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
+  end
+
+  create_table "powers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

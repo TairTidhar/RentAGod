@@ -15,15 +15,20 @@
             <%= cl_image_tag @booking.god.photo, height: 300, width: 400, crop: :fill, class:"rounded-image" %>
         </div>
         <div class="col-md-6">
-          <h4 class="text-left">Find me in:</h4>
+          <h4 class="text-left">Dates booked:</h4>
+          <% start_date = @booking.start_date %>
+          <% end_date = @booking.end_date %>
+          <p class="text-left"> <%= start_date.strftime('%A, %d %b %y') %> - <%=end_date.strftime('%A, %d %b %y') %>
+          <% total = ((end_date - start_date)/(60*60*24)).to_i%> </p>
+
+          <h4 class="text-left">Total cost of booking:</h4>
+          <p class="text-left">$<%= total * @booking.god.price %>
+          <h4 class="text-left">Booking location:</h4>
           <p class="text-left"><%= @booking.god.location %></p>
-          <h4 class="text-left">About me: </h4>
+          <h4 class="text-left">About <%= @booking.god.name %>: </h4>
           <p class="text-left"><%= @booking.god.description %></p>
-          <h4 class="text-left">Pricing:</h4>
-          <p class="text-left">$<%= @booking.god.price %> AUD per day</p>
           <%= link_to "Download your PDF", "#{booking_path(@booking)}.pdf"  %>
         </div>
       </div>
   </div>
 </div>
-<div>
